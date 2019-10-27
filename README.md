@@ -1,5 +1,6 @@
-# Container Action Template
+# Git HTTPS push deploy action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
-
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+This GitHub action allows you to have a deploy step that pushes the master
+branch to an external remote over HTTPS. It is useful for deploying to platforms
+like Heroku or Gigalixir. You should include the credentials in the remote URL
+and therefore make sure that you use a secret.
