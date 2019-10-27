@@ -1,6 +1,10 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
 set -euo pipefail
 
-git remote add upstream "$1"
-git push upstream master
+REMOTE=upstream-$(date +%s)
+
+trap "git remote rm $REMOTE" SIGHUP SIGINT SIGTERM
+
+git remote add $REMOTE "$1"
+git push $REMOTE master
