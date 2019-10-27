@@ -1,12 +1,11 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Git HTTPS push deploy'
+description: 'Simple HTTPS Git master branch push for e.g. Heroku or Gigalixir deploys'
+author: 'Ilkka Poutanen <ilkka@ilkka.dev>'
+inputs:
+  remoteUrl:
+    description: 'Origin to push to'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.remoteUrl }}

@@ -1,3 +1,6 @@
 #!/bin/sh -l
 
-echo "hello $1"
+set -euo pipefail
+
+git remote add upstream "$1"
+git push upstream master
