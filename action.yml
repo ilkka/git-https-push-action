@@ -1,8 +1,9 @@
 name: 'Git HTTPS push deploy'
 description: 'Simple HTTPS Git master branch push for e.g. Heroku or Gigalixir deploys'
 author: 'Ilkka Poutanen <ilkka@ilkka.dev>'
-color: yellow
-icon: arrow-up
+branding:
+  color: 'yellow'
+  icon: 'arrow-up'
 inputs:
   remoteUrl:
     description: 'Origin to push to'
