@@ -4,6 +4,7 @@ author: 'Ilkka Poutanen <ilkka@ilkka.dev>'
 inputs:
   remoteUrl:
     description: 'Origin to push to'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
