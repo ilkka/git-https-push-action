@@ -7,6 +7,11 @@ and therefore make sure that you use a secret.
 
 If the username for your Git remote has a "@", remember to replace it with "%40".
 
+## Inputs
+
+- `remoteUrl`: remote push URL
+- `skipHooks`: set to true to push with --no-verify (default: false)
+
 ## Usage
 
 Here's a usage example where a deploy job runs conditionally after a successful
@@ -32,4 +37,5 @@ jobs:
         name: Deploy
         with:
           remoteUrl: ${{ secrets.PUSH_REMOTE }}
+          skipHooks: false
 ```

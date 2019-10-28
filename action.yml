@@ -8,8 +8,13 @@ inputs:
   remoteUrl:
     description: 'Origin to push to'
     required: true
+  skipHooks:
+    description: 'Skip git hooks with --no-verify'
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    SKIP_HOOKS: ${{ inputs.skipHooks }}
   args:
     - ${{ inputs.remoteUrl }}
