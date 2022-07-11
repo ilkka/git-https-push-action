@@ -20,4 +20,5 @@ fi
 
 git config --global --add safe.directory /github/workspace
 git remote add $REMOTE $REMOTE_URL
+git pull
 git push $(join_by " " $EXTRA_ARGS) $REMOTE HEAD:master
